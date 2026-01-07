@@ -47,7 +47,7 @@ const Hero = () => {
       </video>
 
       <div className="hero-content">
-        <h1>NSP Gym</h1>
+        <h1></h1>
         <a href="#about" className="hero-btn">
           Coming Soon
         </a>
