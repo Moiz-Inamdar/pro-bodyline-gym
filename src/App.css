@@ -49,14 +49,19 @@ body {
 .hero {
   position: relative;
   width: 100%;
-  height: 100vh; /* full viewport height */
-  overflow: hidden; /* avoid scrollbars */
+  min-height: 100vh; /* minimum height, can grow */
+  height: auto;       /* let content decide on mobile */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 
 .hero-video {
   width: 100%;
-  height: 100%;
-  object-fit: cover; /* covers area without stretching */
+  height: auto; /* maintain aspect ratio */
+  max-height: 100%; /* do not overflow */
+  object-fit: cover;
 }
 
 .hero-overlay {
@@ -64,33 +69,30 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: 90%; /* responsive */
   text-align: center;
-  width: 90%; /* responsive width */
   padding: 0 10px;
 }
 
 .hero-overlay h1 {
-  font-size: 3rem;
+  font-size: 2rem; /* smaller default */
   color: white;
 }
 
 .hero-btn {
-  font-size: 1.2rem;
-  padding: 12px 24px;
-  margin-top: 20px;
+  font-size: 1rem;
+  padding: 8px 16px;
+  margin-top: 15px;
 }
 
-/* Mobile adjustments */
-@media (max-width: 768px) {
-  .hero {
-    height: 80vh; /* smaller height on mobile */
-  }
+/* Extra small screens */
+@media (max-width: 480px) {
   .hero-overlay h1 {
-    font-size: 2rem; /* smaller heading */
+    font-size: 1.5rem;
   }
   .hero-btn {
-    font-size: 1rem;
-    padding: 8px 16px;
+    font-size: 0.9rem;
+    padding: 6px 12px;
   }
 }
 
