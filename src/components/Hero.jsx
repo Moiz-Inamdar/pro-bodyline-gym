@@ -17,8 +17,9 @@
 // };
 
 // export default Hero;
-import gymVideo from "../assets/gym.mp4";
+
 import { useEffect, useState } from "react";
+import gymVideo from "../assets/gym.mp4";
 
 const Hero = () => {
   const [height, setHeight] = useState(window.innerHeight);
@@ -32,8 +33,7 @@ const Hero = () => {
   return (
     <section
       className="hero"
-      id="home"
-      style={{ height: `${height}px` }}
+      style={{ height: `${height}px`, position: "relative", overflow: "hidden" }}
     >
       <video
         className="hero-video"
