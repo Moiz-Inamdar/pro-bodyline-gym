@@ -18,38 +18,26 @@
 
 // export default Hero;
 
-
-import { useRef, useEffect } from "react";
+import { MdPadding } from "react-icons/md";
 import gymVideo from "../assets/gym.mp4";
 
 const Hero = () => {
-  const videoRef = useRef(null);
-
-  useEffect(() => {
-    const video = videoRef.current;
-    if (video) {
-      video.play().catch(err => {
-        console.log("Autoplay prevented:", err);
-      });
-    }
-  }, []);
-
   return (
     <section className="hero" id="home">
       <video
-        ref={videoRef}
         className="hero-video"
         autoPlay
         loop
-        
+        muted
         playsInline
         preload="auto"
       >
         <source src={gymVideo} type="video/mp4" />
       </video>
 
-      <div className="hero-overlay">
-        <a href="#about" className="hero-btn">
+      <div className="hero-content">
+        <h1></h1><br />
+        <a href="#about" className="hero-btn" >
           Coming Soon...
         </a>
       </div>
