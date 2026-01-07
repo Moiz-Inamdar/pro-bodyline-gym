@@ -46,92 +46,54 @@ body {
 
 
 /* HERO VIDEO */
-.hero  {
+.hero {
   position: relative;
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-  
-
+  width: 100%;
+  height: 100vh; /* full viewport height */
+  overflow: hidden; /* avoid scrollbars */
 }
-.developer-credit {
-  position: fixed;
-  bottom: 10px;
-  right: 10px;
-  color: red;          /* your desired color */
-  font-size: 12px;
-  pointer-events: none; /* won’t block clicks */
-  z-index: 9999;        /* make sure it's on top of everything */
-  font-weight: bold;    /* optional to make it more visible */
-}
-
 
 .hero-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* covers area without stretching */
+}
+
+.hero-overlay {
   position: absolute;
   top: 50%;
   left: 50%;
-  min-width: 100%;
-  /* filter: brightness(40%); */
-  filter: brightness(40%) contrast(80%);
-  min-height: 100%;
   transform: translate(-50%, -50%);
-  object-fit: cover;
-}
-
-
-/* Floating text animation */
-.floating-text {
-  position: absolute;
-  top: 20px; /* adjust vertical position */
-  white-space: nowrap;
-  font-size: 18px;
-  color: rgba(255, 255, 255, 0.8);
-  z-index: 3;
-  animation: floatText 15s linear infinite;
-}
-
-@keyframes floatText {
-  0% {
-    left: -100%; /* start off-screen left */
-  }
-  100% {
-    left: 100%; /* move to off-screen right */
-  }
-}
-
-
-.hero-content h1,
-.hero-content p {
-  position: relative;
-  z-index: 2;
-  color: black;
-  height: 100%;
-  text-shadow: 0 4px 20px rgba(0,0,0,0.8);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   text-align: center;
+  width: 90%; /* responsive width */
+  padding: 0 10px;
 }
 
-.hero-content h1 {
-  font-size: 50px;
-  letter-spacing: 2px;
-}
-
-.hero-content p {
-  margin: 15px 0;
-  font-size: 18px;
+.hero-overlay h1 {
+  font-size: 3rem;
+  color: white;
 }
 
 .hero-btn {
+  font-size: 1.2rem;
+  padding: 12px 24px;
   margin-top: 20px;
-  padding: 12px 30px;
-  background: red;
-  color: white;
-  text-decoration: none;
-  font-size: 16px;
 }
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .hero {
+    height: 80vh; /* smaller height on mobile */
+  }
+  .hero-overlay h1 {
+    font-size: 2rem; /* smaller heading */
+  }
+  .hero-btn {
+    font-size: 1rem;
+    padding: 8px 16px;
+  }
+}
+
 
 /* SECTIONS */
 section {
