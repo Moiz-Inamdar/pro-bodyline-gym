@@ -13,7 +13,7 @@ body {
 
 /* NAVBAR */
 .navbar {
-  position: fixed;
+  /* position: fixed; */
   top: 0;
   width: 100%;
   z-index: 10;
@@ -43,6 +43,34 @@ body {
 
 .navbar ul li a:hover {
   color: red;
+}
+
+/* LOGO */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-logo {
+  height: 50px;      /* adjust as needed */
+  width: 300px;
+  padding-top: -20px;
+  border-radius: 12px;
+
+  
+}
+/* .navbar-logo {
+  background: #1c1c1c;
+  padding: 25px;
+  border-radius: 8px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+} */
+
+.navbar-logo:hover {
+  transform: translateZ(10px);
+  box-shadow: 0 10px 20px rgba(255, 0, 0, 0.5);
 }
 
 

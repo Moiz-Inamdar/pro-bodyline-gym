@@ -1,7 +1,11 @@
+import logo from "../assets/logo.png";
+
 const Navbar = () => {
   return (
     <nav className="navbar">
-      <h2>PRO BODYLINE GYM</h2>
+    <a href="#contact">
+       <img src={logo} alt="Pro Bodyline Gym Logo" className="navbar-logo" />
+     </a>
       <ul>
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
