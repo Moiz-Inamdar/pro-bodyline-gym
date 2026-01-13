@@ -5,10 +5,10 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
   const menuRef = useRef(null);
   useEffect(() => {
-    const closeOnScroll = () => setOpen(false);
-    window.addEventListener("scroll", closeOnScroll);
-    return () => window.removeEventListener("scroll", closeOnScroll);
-  }, []);
+  const closeOnScroll = () => setOpen(false);
+  window.addEventListener("scroll", closeOnScroll);
+  return () => window.removeEventListener("scroll", closeOnScroll);
+}, []);
 
   useEffect(() => {
     const handleClickOutside = (e) => {
